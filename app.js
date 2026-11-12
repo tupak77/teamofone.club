@@ -311,6 +311,25 @@
     });
   });
 
+  /* ---------- honest urgency: countdown to the Monday system drop ---------- */
+  var drop = $('[data-drop]');
+  if (drop) {
+    var nextMonday = function () {
+      var n = new Date(), t = new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth(), n.getUTCDate(), 8, 0, 0));
+      var add = (8 - t.getUTCDay()) % 7; // days until Monday
+      t.setUTCDate(t.getUTCDate() + add);
+      if (t <= n) t.setUTCDate(t.getUTCDate() + 7);
+      return t;
+    };
+    var pad = function (x) { return (x < 10 ? '0' : '') + x; };
+    var tickDrop = function () {
+      var ms = nextMonday() - new Date();
+      var d = Math.floor(ms / 864e5), hh = Math.floor(ms / 36e5) % 24, mm = Math.floor(ms / 6e4) % 60, ss = Math.floor(ms / 1e3) % 60;
+      drop.textContent = 'drops in ' + (d ? d + 'd ' : '') + pad(hh) + 'h ' + pad(mm) + 'm ' + pad(ss) + 's';
+    };
+    tickDrop(); setInterval(tickDrop, 1000);
+  }
+
   /* ---------- systems filter ---------- */
   var wfil = $('.wfil'), wf = $('.wf');
   if (wfil && wf) {

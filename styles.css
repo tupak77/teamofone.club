@@ -637,7 +637,7 @@ summary:hover .pm{background:#ff5b1f;color:#0d0d0b}
 .mqw{margin-top:48px;display:flex;flex-direction:column;gap:14px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .mq{overflow:hidden}
 .mqt{display:flex;gap:14px;width:max-content;animation:mq 70s linear infinite}
-.mq.rev .mqt{animation-direction:reverse;animation-duration:80s}
+.mq.mq-rev .mqt{animation-direction:reverse;animation-duration:80s}
 .mq:hover .mqt,.mq:active .mqt{animation-play-state:paused}
 @keyframes mq{to{transform:translateX(calc(-50% - 7px))}}
 .rc{margin:0;flex:0 0 380px;display:flex;flex-direction:column;gap:14px;padding:22px;border-radius:20px;background:#141412;border:1px solid rgba(242,239,230,.12);transition:border-color .25s,transform .25s}
@@ -650,7 +650,7 @@ summary:hover .pm{background:#ff5b1f;color:#0d0d0b}
   .rc{flex-basis:280px;padding:18px;gap:10px}
   .rc blockquote{font-size:14px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
   .mqt{animation-duration:55s;gap:10px}
-  .mq.rev .mqt{animation-duration:62s}
+  .mq.mq-rev .mqt{animation-duration:62s}
   @keyframes mq{to{transform:translateX(calc(-50% - 5px))}}
   .pq{padding:18px}
 }
@@ -659,3 +659,15 @@ summary:hover .pm{background:#ff5b1f;color:#0d0d0b}
   .outs span{font-size:13px;padding:9px 10px;border-radius:14px;line-height:1.3;text-align:left;display:flex;align-items:center;gap:2px}
 }
 .plans3.one{grid-template-columns:minmax(0,1fr);max-width:480px}
+
+/* =========================================================
+   v7: conversion layer
+   ========================================================= */
+.ok{color:#ff8a5c;font-weight:600}
+.paper .ok{color:#a33a10}
+[data-drop]{font-variant-numeric:tabular-nums}
+.next{list-style:none;margin:2px 0 0;padding:14px 0 0;border-top:1px dashed rgba(242,239,230,.14);display:flex;flex-direction:column;gap:9px}
+.next li{display:flex;align-items:center;gap:10px;font-size:14px;color:#9a968b}
+.next b{flex:0 0 22px;height:22px;border-radius:50%;background:rgba(255,91,31,.14);color:#ff8a5c;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px}
+.final .hproof{margin-top:4px}
+@media (max-width:640px){.badge{white-space:nowrap;font-size:12px;gap:8px}.badge .nc{display:none}}
