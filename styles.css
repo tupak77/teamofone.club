@@ -182,7 +182,7 @@ details p{margin:0 0 24px;font-size:16px;line-height:1.55;color:#55524a;max-widt
 }
 @media (max-width:640px){.sys{grid-template-columns:repeat(2,minmax(0,1fr))}.faq{grid-template-columns:repeat(1,minmax(0,1fr))}.nav .pill{display:none}.bl{flex-basis:56px;font-size:13px}}
 @media (max-width:420px){.stats{grid-template-columns:repeat(1,minmax(0,1fr))}.stat{border-right:0!important;border-bottom:1px solid rgba(242,239,230,.12)}.sys{grid-template-columns:repeat(1,minmax(0,1fr))}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.up,.stp,.done{opacity:1;transform:none}.strike::after{transform:rotate(-3deg)}.ck svg{opacity:1}.ck::after{transform:scale(1)}}
+
 
 .player{max-width:1040px;margin:48px auto 0;background:#161614;border:1px solid rgba(242,239,230,.12);border-radius:22px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6);text-align:left}
 .pbody{display:grid;grid-template-columns:260px minmax(0,1fr)}
@@ -538,13 +538,7 @@ summary:hover .pm{background:#ff5b1f;color:#0d0d0b}
 .mbox .x{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(242,239,230,.2);background:transparent;color:#f2efe6;font-size:20px;cursor:pointer}
 .mbox .cta{width:100%;margin-top:22px}
 
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .js .rv,.js .por .pa{opacity:1!important;transform:none!important}
-  .h1 .w{opacity:1;transform:none;filter:none}
-  .por .pb s{background-size:100% 2px}
-  .mbar{transition:none}
-}
+
 
 /* rotating guarantee seal */
 .seal{position:relative;border-color:transparent}

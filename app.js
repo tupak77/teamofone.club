@@ -29,7 +29,7 @@
     { id: 'va', name: 'Virtual assistant', sys: 'Workspace kit + inbox triage', cost: 800 }
   ];
 
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduce = false; // effects always on, whatever the OS motion setting
   var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
