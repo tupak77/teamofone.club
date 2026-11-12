@@ -311,6 +311,20 @@
     });
   });
 
+  /* ---------- systems filter ---------- */
+  var wfil = $('.wfil'), wf = $('.wf');
+  if (wfil && wf) {
+    var cards = $$('.wc', wf);
+    wfil.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      var f = b.getAttribute('data-f');
+      $$('button', wfil).forEach(function (x) { x.classList.toggle('on', x === b); x.setAttribute('aria-pressed', String(x === b)); });
+      cards.forEach(function (c) { c.classList.toggle('dim', f !== 'all' && c.getAttribute('data-cat') !== f); });
+      if (wf.scrollTo) wf.scrollTo({ left: 0, behavior: reduce ? 'auto' : 'smooth' });
+      track('systems_filter', { filter: f });
+    });
+  }
+
   /* ---------- analytics on CTAs ---------- */
   $$('[data-track]').forEach(function (a) {
     a.addEventListener('click', function () { track('cta_click', { where: a.getAttribute('data-track') }); });
