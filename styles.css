@@ -658,3 +658,4 @@ summary:hover .pm{background:#ff5b1f;color:#0d0d0b}
   .outs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:22px}
   .outs span{font-size:13px;padding:9px 10px;border-radius:14px;line-height:1.3;text-align:left;display:flex;align-items:center;gap:2px}
 }
+.plans3.one{grid-template-columns:minmax(0,1fr);max-width:480px}
