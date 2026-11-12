@@ -8,7 +8,7 @@
    * opens a "doors open soon" modal instead of a dead click.
    * ------------------------------------------------------------------ */
   var CHECKOUT = {
-    member: { monthly: '', yearly: '' },
+    member: { monthly: 'https://whop.com/checkout/plan_dOhdkjz7z3sBC', yearly: 'https://whop.com/checkout/plan_dOhdkjz7z3sBC' },
     plus:   { monthly: '', yearly: '' }
   };
   var CONTACT_EMAIL = 'hello@teamofone.club';
@@ -216,7 +216,7 @@
       var total = SERVICES.filter(function (s) { return sel.indexOf(s.id) >= 0; })
         .reduce(function (a, s) { return a + s.cost; }, 0);
       animate(totalEl, total);
-      animate(yearlyEl, Math.max(0, (total - 49) * 12));
+      animate(yearlyEl, Math.max(0, (total - 29.99) * 12));
     };
     calc.addEventListener('click', function (e) {
       var b = e.target.closest('.svc'); if (!b) return;
@@ -236,7 +236,7 @@
   }
 
   /* ---------- pricing toggle ---------- */
-  var billing = 'yearly';
+  var billing = 'monthly';
   var tog = $('[data-tog]');
   if (tog) {
     var thumb = $('.thumb', tog), btns = $$('.tg', tog);

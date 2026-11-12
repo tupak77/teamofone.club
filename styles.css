@@ -605,3 +605,8 @@ summary:hover .pm{background:#ff5b1f;color:#0d0d0b}
   .wf .wc.dim{display:none}
   .swipe{display:block;text-align:center;margin:6px 0 0;font-family:'Space Grotesk',sans-serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#77746b}
 }
+
+/* v3: single price with cents; one sticky CTA on mobile (bottom bar, header scrolls away) */
+.amt .cents{font-size:.4em;letter-spacing:-.03em;margin-left:.04em}
+.plans3{margin-top:44px}
+@media (max-width:760px){.hdr{position:relative}}
