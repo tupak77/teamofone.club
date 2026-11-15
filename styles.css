@@ -781,3 +781,34 @@ summary:hover .pm{background:#ff5b1f;color:#0d0d0b}
   .crew2{gap:6px;margin-top:24px}
   .crew2 span{padding:7px 11px;font-size:13px;gap:6px}
 }
+
+/* =========================================================
+   v9: compact "Sound familiar?" + agents on light
+   ========================================================= */
+.sec.tight{padding:clamp(64px,8vw,104px) 0}
+.swaps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:40px}
+.sw{background:#141412;border:1px solid rgba(242,239,230,.12);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:transform .3s var(--ease),border-color .3s}
+.sw:hover{transform:translateY(-4px);border-color:rgba(255,91,31,.5)}
+.swi{width:44px;height:44px;border-radius:13px;background:rgba(255,91,31,.12);border:1px solid rgba(255,91,31,.3);display:flex;align-items:center;justify-content:center}
+.swo{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(17px,1.5vw,20px);letter-spacing:-.02em;line-height:1.2;color:#9a968b}
+.swo s{text-decoration:none;background:linear-gradient(#ff5b1f,#ff5b1f) no-repeat 0 55%/0% 2px;transition:background-size .7s var(--ease) .3s}
+.sw.in-view .swo s,html:not(.js) .swo s{background-size:100% 2px}
+.swn{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;padding:6px 11px;border-radius:999px;background:#ff5b1f;color:#0d0d0b;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13.5px;opacity:0;transform:translateY(6px) scale(.96);transition:opacity .45s var(--ease) .9s,transform .45s var(--ease) .9s}
+.sw.in-view .swn,html:not(.js) .swn{opacity:1;transform:none}
+@media (max-width:1000px){.swaps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .swaps{gap:8px;margin-top:28px}
+  .sw{padding:14px;gap:8px;border-radius:16px}
+  .swi{width:36px;height:36px;border-radius:11px}
+  .swo{font-size:15px}
+  .swn{font-size:11.5px;padding:5px 9px;gap:5px}
+}
+/* agents section now sits on the light background */
+.paper .ag{box-shadow:0 1px 0 rgba(13,13,11,.04)}
+.paper .ag:hover{box-shadow:0 26px 60px rgba(13,13,11,.22)}
+.paper .agmore{color:#55524a}
+.paper .agmore b{color:#0d0d0b}
+.paper .swipe{color:#77746b}
+.ag{color:#f2efe6}
+.swo{color:#c9c5b9}
+.swo s{background-image:linear-gradient(rgba(255,91,31,.85),rgba(255,91,31,.85))}
