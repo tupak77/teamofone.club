@@ -330,6 +330,17 @@
     tickDrop(); setInterval(tickDrop, 1000);
   }
 
+  /* ---------- agents: cycle what each AI employee is "working on" ---------- */
+  $$('[data-tasks]').forEach(function (el, k) {
+    var tasks = el.getAttribute('data-tasks').split('|'), span = $('span', el), n = 0;
+    setTimeout(function () {
+      setInterval(function () {
+        span.classList.add('out');
+        setTimeout(function () { n = (n + 1) % tasks.length; span.textContent = tasks[n]; span.classList.remove('out'); }, 300);
+      }, 2600);
+    }, k * 420);
+  });
+
   /* ---------- systems filter ---------- */
   var wfil = $('.wfil'), wf = $('.wf');
   if (wfil && wf) {
