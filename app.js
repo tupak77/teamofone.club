@@ -383,6 +383,20 @@
       if (e.key === 'ArrowLeft') { e.preventDefault(); goS(curS - 1); }
     });
     updS();
+    /* first time the carousel is seen: a small nudge that shows it can be swiped */
+    if ('IntersectionObserver' in window && !reduce) {
+      var nio = new IntersectionObserver(function (es) {
+        if (!es[0].isIntersecting) return;
+        nio.disconnect();
+        setTimeout(function () {
+          if (car.scrollLeft > 4) return;
+          car.style.scrollSnapType = 'none';
+          car.scrollTo({ left: 70, behavior: 'smooth' });
+          setTimeout(function () { car.scrollTo({ left: 0, behavior: 'smooth' }); setTimeout(function () { car.style.scrollSnapType = ''; }, 500); }, 550);
+        }, 700);
+      }, { threshold: 0.6 });
+      nio.observe(car);
+    }
   }
 
   /* ---------- analytics on CTAs ---------- */
